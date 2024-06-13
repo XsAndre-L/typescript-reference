@@ -1,14 +1,14 @@
 import { builtInObjects } from "./builtInObjects";
+import { runVariablesReference } from "./variables";
 
-console.log("Hello via Bun!");
+function main() {
+  let exit: boolean = false;
 
-// Variables
-const a: number = 1;
-const b = 2;
+  while (!exit) {
+    runVariablesReference();
+    console.log("test");
+    exit = true;
+  }
+}
 
-const str: string = "Hello";
-const str_inferred = "Hello";
-
-console.log(process.env.TEST);
-
-builtInObjects();
+main();
